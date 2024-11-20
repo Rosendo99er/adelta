@@ -5703,6 +5703,10 @@ async function sendMessage() {
           loaderElement.style.display = 'none';
           document.getElementById('loader-container').style.display = 'none';
           document.getElementById('loader-text').style.display = 'none';
+    } finally {
+        // Immer ausführen: Eingabefeld leeren und Cursor positionieren
+        inputElement.value = '';
+        inputElement.focus();
     }
 }
 
